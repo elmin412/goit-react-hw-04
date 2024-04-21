@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from "formik"
-
+import style from "../SearchBar/SearchBar.module.css"
 
 
 export default function SearchBar({ onSubmit }) {
@@ -18,8 +18,8 @@ export default function SearchBar({ onSubmit }) {
     }
                
 }}>
-        <Form>
-            <Field 
+        <Form className={style.headerSearch}>
+            <Field className={style.inputSearch}
                 type="text"
                 name="query"
                 autoFocus
