@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../App/App.css';
-import {fetchGallery} from '../gallery-api';
+import {fetchGallery} from '../../gallery-api';
 import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from '../ImageGallery/ImageGallery';
 import Loader from "../Loader/Loader";
