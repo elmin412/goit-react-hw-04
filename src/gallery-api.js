@@ -9,12 +9,7 @@ export const fetchGallery = async (searchQuery, currentPage) => {
             query: searchQuery,
             per_page: 12,
             page: currentPage,
-            
         }
-        
     });
-        return response.data.results;
-
-    
-
+   return response.data.results;
 };

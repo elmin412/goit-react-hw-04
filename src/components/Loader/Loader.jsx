@@ -12,8 +12,6 @@ export default function Loader() {
                     width="50"
                     color="#4fa94d"
                     ariaLabel="three-circles-loading"
-                    wrapperStyle={{}}
-                    wrapperClass=""
                     /></b>
         </>
         

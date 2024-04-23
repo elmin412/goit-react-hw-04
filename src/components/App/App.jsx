@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
 import '../App/App.css';
 import {fetchGallery} from '../../gallery-api';
 import SearchBar from "../SearchBar/SearchBar";
@@ -43,9 +44,8 @@ function App() {
 
   useEffect(() => {
     if (query === "") {
-      return;
+      return; 
     }
-
   async function getGallery() {
     try {
         setLoading(true);
@@ -59,7 +59,6 @@ function App() {
         setLoading(false)
       } }
     getGallery()
-    
   }, [page, query]);
 
   return (
@@ -70,7 +69,8 @@ function App() {
       {error && <ErrorMessage/>}
       {images.length > 0 && <ImageGallery items={images} openModal={openModal} />}
       {images.length > 0 && <LoadMoreBtn onClick={handleMoreBtn} />}
-      <ImageModal isOpen={modalIsOpen} onClose={modalClose} modalimg={selectedImage} alt={description} />
+      <ImageModal isOpen={modalIsOpen}  onClose={modalClose} modalimg={selectedImage} alt={description} />
+      <Toaster position="bottom-center" reverseOrder={false} toastOptions={ {duration: 5000}}  />
     </>
   )
 }
